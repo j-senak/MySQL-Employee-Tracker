@@ -33,6 +33,7 @@ function runPrompts() {
         "Remove Employee",
         "Update Employee Role",
         "Update Employee Manager",
+        "Exit",
       ],
     })
     .then(function (choice) {
@@ -64,14 +65,52 @@ function runPrompts() {
         case "Update Employee Manager":
           updateManager();
           break;
+
+        case "Exit":
+          connection.end();
+          break;
       }
     });
 }
 
 function viewAll() {
-    
-  };
+  connection.query("SELECT * FROM employee", function (err, res) {
+    if (err) throw err;
+    for (var i = 0; i < res.length; i++) {
+      console.log(
+        res[i].id +
+          " | " +
+          res[i].first_name +
+          " | " +
+          res[i].last_name +
+          " | " +
+          res[i].role_id +
+          " | " +
+          res[i].manager_id
+      );
+    }
+    console.log("--------------------------------");
+  });
+  runPrompts();
+}
 
 function viewByDept() {
+  connection.query("SELECT * FROM department", function (err, res) {
+    if (err) throw err;
+    for (var i = 0; i < res.length; i++) {
+      console.log(res[i].id);
+    }
+    console.log("--------------------------------");
+  });
+  runPrompts();
+}
 
+function viewByManager() {
+  connection.query("SELECT * FROM employee WHERE manager_id=?", function (
+    err,
+    res
+  ) {
+    if (err) throw err;
+    console.log(res);
+  });
 }
