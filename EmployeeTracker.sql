@@ -25,4 +25,10 @@ CREATE TABLE department (
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("John", "Senak", 8412, 1);
 
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Sandy", "Rhodes", 7105, 2);
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Martin", "Abby", 6561, 0);
+
 SELECT * FROM employee

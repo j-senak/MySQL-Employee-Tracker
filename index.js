@@ -69,9 +69,9 @@ function runPrompts() {
 }
 
 function viewAll() {
-    runSearch(console.table());
+    
   };
 
 function viewByDept() {
-    
+
 }
