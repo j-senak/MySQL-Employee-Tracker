@@ -42,7 +42,7 @@ function runPrompts() {
           break;
 
         case "View All Employees By Department":
-          ViewByDept();
+          viewByDept();
           break;
 
         case "View All Employees By Manager":
@@ -66,4 +66,12 @@ function runPrompts() {
           break;
       }
     });
+}
+
+function viewAll() {
+    runSearch(console.table());
+  };
+
+function viewByDept() {
+    
 }

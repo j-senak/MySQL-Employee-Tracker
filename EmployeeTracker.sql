@@ -13,7 +13,7 @@ CREATE TABLE employee (
 );
 
 CREATE TABLE role (
-    title VARCHAR NULL,
+    title VARCHAR(30) NOT NULL,
     salary DECIMAL(10,4) NULL,
     department_id INT REFERENCES department(name)
 );
@@ -22,3 +22,7 @@ CREATE TABLE department (
     name VARCHAR(30) NOT NULL
 );
 
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("John", "Senak", 8412, 1);
+
+SELECT * FROM employee
