@@ -114,3 +114,12 @@ function viewByManager() {
     console.log(res);
   });
 }
+
+function addEmployee() {}
+
+function removeEmployee() {}
+
+function updateRole() {}
+
+function updateManager() {}
+
