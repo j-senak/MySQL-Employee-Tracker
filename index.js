@@ -1,4 +1,20 @@
-const cTable = require('console.table');
-const logo = require('asciiart-logo');
+const cTable = require("console.table");
+const logo = require("asciiart-logo");
 const inquirer = require("inquirer");
 const mysql = require("mysql");
+
+var connection = mysql.createConnection({
+  host: "localhost",
+
+  port: 3306,
+
+  user: "root",
+
+  password: "BAssist43!",
+  database: "employee_DB",
+});
+
+connection.connect(function(err) {
+    if (err) throw err;
+    runSearch();
+  });
