@@ -8,7 +8,7 @@ A company needs to be able to keep up with an ever growing and changing staff. T
 First we start with creating a server.js and installng our dependacies like Express and MySql. With that we create our .sql to write the tables we need. With tables created, we exported them to MySQL. That allows us to start working on the server.js where we connect to our database and set up the port we will use. Then we make a series of options and switch cases that our user can select in the terminal. With those set up, we write functions for each option to perform what the user wants.
 
 ## Screenshots
-[!picture]
+
 
 ## Github page
 https://github.com/j-senak/MySQL-Employee-Tracker
