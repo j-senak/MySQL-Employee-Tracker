@@ -115,11 +115,36 @@ function viewByManager() {
   });
 }
 
-function addEmployee() {}
+function addEmployee() {
+    inquirer.prompt({
+        name: "first_name",
+        type: "input",
+        message: "Enter employee's first name."
+    },
+    {
+        name: "last_name",
+        type: "input",
+        message: "Enter employee's last name."
+    },
+    {
+        name: "role_id",
+        type: "input",
+        message: "Please enter employee's ID."
+    },
+    {
+        name: "manager_id",
+        type: "input",
+        message: "Please enter employee's manager id number. If no manager, please enter 0."
+    }
+    ).then(function(response) {
+        connection.query("INSERT INTO employee SET ?", {})
+    });
+}
+
+    
 
 function removeEmployee() {}
 
 function updateRole() {}
 
 function updateManager() {}
-
